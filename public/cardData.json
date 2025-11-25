@@ -1,0 +1,74 @@
+[
+    {
+        "skillId": 1,
+        "skillName": "Beginner Guitar Lessons",
+        "providerName": "Alex Martin",
+        "providerEmail": "alex@skillswap.com",
+        "price": 20,
+        "rating": 4.8,
+        "slotsAvailable": 3,
+        "description": "Acoustic guitar classes for complete beginners.",
+        "image": "https://i.postimg.cc/CK9vF8N7/lifestyle-750391-684.jpg",
+        "category": "Music"
+    },
+    {
+        "skillId": 2,
+        "skillName": "Spoken English Practice",
+        "providerName": "Sara Hossain",
+        "providerEmail": "sara@skillswap.com",
+        "price": 10,
+        "rating": 4.6,
+        "slotsAvailable": 5,
+        "description": "Conversational English sessions for non-native speakers.",
+        "image": "https://i.postimg.cc/wTWQqJx2/unnamed.jpg",
+        "category": "Language"
+    },
+    {
+        "skillId": 3,
+        "skillName": "Basic Cooking & Recipe Skills",
+        "providerName": "Maria Lopez",
+        "providerEmail": "maria@skillswap.com",
+        "price": 15,
+        "rating": 4.9,
+        "slotsAvailable": 4,
+        "description": "Learn essential cooking techniques and quick recipes.",
+        "image": "https://i.postimg.cc/FsqkCxsp/cooking.jpg",
+        "category": "Cooking"
+    },
+    {
+        "skillId": 4,
+        "skillName": "Front-End Web Development Basics",
+        "providerName": "John Parker",
+        "providerEmail": "john@skillswap.com",
+        "price": 25,
+        "rating": 4.7,
+        "slotsAvailable": 2,
+        "description": "HTML, CSS, and JavaScript fundamentals for beginners.",
+        "image": "https://i.postimg.cc/bNGsn2H7/Front-End-Developer-HTML-CSS-Bootstrap-Java-Script-React.jpg",
+        "category": "Technology"
+    },
+    {
+        "skillId": 5,
+        "skillName": "Digital Drawing & Illustration",
+        "providerName": "Amina Rahman",
+        "providerEmail": "amina@skillswap.com",
+        "price": 18,
+        "rating": 4.9,
+        "slotsAvailable": 3,
+        "description": "Learn sketching, shading, and designing digital artwork.",
+        "image": "https://i.postimg.cc/y84YSpN8/hand-drawn-digital-drawing-tablet-concept-with-woman-hands-60389-125.avif",
+        "category": "Art"
+    },
+    {
+        "skillId": 6,
+        "skillName": "Yoga for Stress Relief",
+        "providerName": "Liam Cooper",
+        "providerEmail": "liam@skillswap.com",
+        "price": 12,
+        "rating": 4.5,
+        "slotsAvailable": 6,
+        "description": "Relaxing yoga sessions designed to reduce stress and improve flexibility.",
+        "image": "https://i.postimg.cc/kX8RZb6g/yoga-flat-icon-free-png-download-1756641814-156562756.webp",
+        "category": "Health"
+    }
+]
