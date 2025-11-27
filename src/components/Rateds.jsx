@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 const ratedPromise = fetch("/cardData.json")
     .then((res) => res.json());
@@ -10,7 +11,7 @@ const Rateds = () => {
             <section className="py-12 bg-gray-100">
                 <div className="max-w-6xl mx-auto px-4">
                     <h2 className="text-2xl font-bold mb-6 text-gray-800">
-                        ⭐ Top Rated Providers
+                        Top Rated Providers
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -25,11 +26,13 @@ const Rateds = () => {
                                     className="w-full h-40 object-cover rounded"
                                 />
 
-                                <h3 className="text-lg font-semibold mt-3">{provider.name}</h3>
-                                <p className="text-sm text-gray-600">{provider.skill}</p>
+                                <h3 className="text-lg font-semibold mt-3">{provider.skillName}</h3>
+                                <p className="text-sm text-gray-600">{provider.providerName}</p>
+                                <p className="text-sm text-gray-600">{provider.category}</p>
 
-                                <p className="text-yellow-500 font-semibold mt-2">
-                                    ⭐ {provider.rating}
+                                <p className=" font-semibold mt-2">
+                                    {provider.rating}
+                                    <div className='flex text-yellow-500'><FaStar /> <FaStar /><FaStar /> <FaStar /><FaStarHalfAlt /></div>
                                 </p>
                             </div>
                         ))}

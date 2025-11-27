@@ -5,6 +5,8 @@ import Login from "../components/Login";
 import Profile from "../pages/profile";
 import Card from "../components/Cards";
 import Rateds from "../components/Rateds";
+import Signup from "../components/Signup";
+import Details from "../pages/Details";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
                 element: <Card></Card>
             },
             {
+                path: "/details",
+                element: <Details></Details>
+            },
+            {
                 path: "/cardData/:skillId",
                 element: <Rateds></Rateds>
             },
@@ -30,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/signup",
+                element: <Signup></Signup>
             },
 
         ]
