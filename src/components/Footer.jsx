@@ -3,17 +3,17 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer class=" bg-base-300  flex-col justify-center p-10">
+            <footer class=" bg-base-300  flex-col justify-center p-10 ">
                 <div class=" mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
-                    {/* <!-- Contact --> */}
+
                     <div>
                         <p>Email: support@example.com</p>
                         <p>Phone: +880 1234 567 890</p>
                         <p>Address: Dhaka, Bangladesh</p>
                     </div>
 
-                    {/* <!-- Social --> */}
+
                     <div className="grid grid-flow-col gap-4">
                         <a>
                             <svg
@@ -50,7 +50,7 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    {/* <!-- Policy --> */}
+
                     <div class="text-sm">
                         <a href="#" class="hover">Privacy Policy</a>
                     </div>

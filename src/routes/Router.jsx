@@ -7,6 +7,7 @@ import Card from "../components/Cards";
 import Rateds from "../components/Rateds";
 import Signup from "../components/Signup";
 import Details from "../pages/Details";
+import AuthLayout from "../layouts/AuthLayout";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
                 element: <Details></Details>
             },
             {
-                path: "/cardData/:skillId",
+                path: "/rateds",
                 element: <Rateds></Rateds>
             },
             {
@@ -46,7 +47,17 @@ const router = createBrowserRouter([
     },
     {
         path: "/auth",
-        element: <div>Authentication Layout</div>,
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/auth/signup",
+                element: <Signup></Signup>
+            },
+        ]
     },
     {
         path: "/news",
