@@ -1,6 +1,5 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { use } from 'react';
 import { FaStar } from 'react-icons/fa';
-import { useNavigate } from 'react-router';
 
 import { toast, ToastContainer } from 'react-toastify';
 
@@ -10,13 +9,6 @@ const detailsPromise = fetch("/cardData.json")
 const Details = () => {
 
     const details = use(detailsPromise);
-    const navigate = useNavigate();
-    const [loggedIn, setLoggedIn] = useState(false);
-
-
-    // useEffect(() => {
-    //     if (!loggedIn) navigate("/login");
-    // }, []);
 
 
     const handleSubmit = (e) => {
@@ -49,7 +41,7 @@ const Details = () => {
                             <p><strong>Provider:</strong> {detail.providerName}</p>
                             <p><strong>Email:</strong> {detail.providerEmail}</p>
                             <p><strong>Price:</strong> ${detail.price}</p>
-                            <p><strong>Rating:</strong> <FaStar /> {detail.rating}</p>
+                            <p className="flex gap-1"><strong>Rating:</strong> <span className="flex"><FaStar /> {detail.rating}</span></p>
                             <p><strong>Slots:</strong> {detail.slotsAvailable}</p>
                             <p><strong>Category:</strong> {detail.category}</p>
                             <p>{detail.description}</p>

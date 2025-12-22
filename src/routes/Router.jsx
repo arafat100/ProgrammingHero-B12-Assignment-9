@@ -8,6 +8,7 @@ import Rateds from "../components/Rateds";
 import Signup from "../components/Signup";
 import Details from "../pages/Details";
 import AuthLayout from "../layouts/AuthLayout";
+import PrivateRouter from "../provider/PrivateRouter";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
             },
             {
                 path: "/details",
-                element: <Details></Details>
+                element: <PrivateRouter>
+                    <Details></Details>
+                </PrivateRouter>
             },
             {
                 path: "/rateds",
@@ -33,14 +36,6 @@ const router = createBrowserRouter([
             {
                 path: "/profile",
                 element: <Profile></Profile>
-            },
-            {
-                path: "/login",
-                element: <Login></Login>
-            },
-            {
-                path: "/signup",
-                element: <Signup></Signup>
             },
 
         ]

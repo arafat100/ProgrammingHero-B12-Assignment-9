@@ -32,7 +32,7 @@ const Rateds = () => {
 
                                 <p className=" font-semibold mt-2">
                                     {provider.rating}
-                                    <div className='flex text-yellow-500'><FaStar /> <FaStar /><FaStar /> <FaStar /><FaStarHalfAlt /></div>
+                                    <span className='flex text-yellow-500'><FaStar /> <FaStar /><FaStar /> <FaStar /><FaStarHalfAlt /></span>
                                 </p>
                             </div>
                         ))}
