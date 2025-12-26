@@ -9,6 +9,7 @@ import Signup from "../components/Signup";
 import Details from "../pages/Details";
 import AuthLayout from "../layouts/AuthLayout";
 import PrivateRouter from "../provider/PrivateRouter";
+import Blog from "../pages/Blog";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "/blog",
+                element: <Blog></Blog>
             },
             {
                 path: "/cardData/:skillId",

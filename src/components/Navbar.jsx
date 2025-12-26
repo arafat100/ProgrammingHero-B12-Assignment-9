@@ -27,8 +27,14 @@ const Navbar = () => {
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <NavLink to="/">Home</NavLink>
+                        <NavLink to="/blog">Blog</NavLink>
 
-                        <NavLink to="/profile">My Profile</NavLink>
+                        <div>
+                            {user &&
+                                <ul>
+                                    <NavLink to="/profile">My Profile</NavLink>
+                                </ul>}
+                        </div>
                     </ul>
                 </div>
                 <span className="font-bold text-xl text-[#4E47FF]">SkillSwap</span>
@@ -38,14 +44,22 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <NavLink to="/">Home</NavLink>
                 </ul>
-                <ul>
-                    <NavLink to="/profile">My Profile</NavLink>
+                <ul className="menu menu-horizontal px-1">
+                    <NavLink to="/quickAction">Quick Action</NavLink>
                 </ul>
+                <div>
+                    {user &&
+                        <ul>
+                            <NavLink to="/profile">My Profile</NavLink>
+                        </ul>}
+                </div>
+
             </div>
 
             <div className="navbar-end flex gap-3">
                 <div>{user && user.email}</div>
-                <img className='h-10 w-10' src={userIcon} alt="" />
+                <img className='h-10 w-10' src={`${user ? user.photoURL
+                    : userIcon}`} alt="" />
 
                 {user ? (<button onClick={handleLogOut} className=" btn btn-primary">LogOut</button>) : (<NavLink to="/auth/login" className="btn btn-primary">Login</NavLink>)}
 

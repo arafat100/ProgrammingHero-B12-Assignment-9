@@ -1,9 +1,9 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
-
+    const [error, setError] = useState("");
     const { signIn } = use(AuthContext);
     const location = useLocation();
     console.log(location);
@@ -25,8 +25,9 @@ const Login = () => {
             })
             .catch((error) => {
                 const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorCode, errorMessage);
+                // const errorMessage = error.message;
+                // alert(errorCode, errorMessage);
+                setError(errorCode);
             });
 
     };
@@ -50,15 +51,22 @@ const Login = () => {
                                 <input
                                     type="email"
                                     name="email"
-                                    className="input" placeholder="Email" />
+                                    className="input"
+                                    placeholder="Email"
+                                    required />
 
                                 {/* password */}
                                 <label className="label">Password</label>
                                 <input
                                     name="password"
-                                    type="password" className="input" placeholder="Password" />
+                                    type="password"
+                                    className="input"
+                                    placeholder="Password"
+                                    required />
 
                                 <div><a className="link link-hover">Forgot password?</a></div>
+
+                                {error && <p className="text-red-400 text-sm">{error}</p>}
                                 <button type="submit" className="btn text-white bg-blue-600 mt-4">Login</button>
                                 <p className="text-center mt-4 text-sm">
                                     Don't have an account?

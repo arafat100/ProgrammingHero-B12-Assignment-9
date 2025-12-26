@@ -1,19 +1,11 @@
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Signup = () => {
-    const { createUser, setUser } = use(AuthContext);
+    const { createUser, setUser, updateUser } = use(AuthContext);
+    const navigate = useNavigate;
 
-    // const [user, setUser] = useState({
-    //     name: "",
-    //     email: "",
-    //     password: "",
-    // });
-
-    // const handleChange = (e) => {
-    //     setUser({ ...user, [e.target.name]: e.target.value });
-    // };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,7 +20,15 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 // console.log(user);
-                setUser(user);
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo });
+                        navigate("/");
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -56,9 +56,6 @@ const Signup = () => {
                                 type="text"
                                 name="name"
                                 className="input"
-                                // value={user.name}
-                                // onChange={handleChange}
-                                // className="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring"
                                 placeholder="Enter your name"
                                 required
                             />
@@ -69,9 +66,6 @@ const Signup = () => {
                                 type="text"
                                 name="photo"
                                 className="input"
-                                // value={user.photo}
-                                // onChange={handleChange}
-                                // className="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring"
                                 placeholder="photo URl"
                                 required
                             />
@@ -83,9 +77,6 @@ const Signup = () => {
                                 type="email"
                                 name="email"
                                 className="input"
-                                // value={user.email}
-                                // onChange={handleChange}
-                                // className="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring"
                                 placeholder="Enter your email"
                                 required
                             />
@@ -97,9 +88,6 @@ const Signup = () => {
                                 type="password"
                                 name="password"
                                 className="input"
-                                // value={user.password}
-                                // onChange={handleChange}
-                                // className="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring"
                                 placeholder="Enter your password"
                                 required
                             />
