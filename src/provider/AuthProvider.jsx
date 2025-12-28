@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import React, { createContext, useEffect, useState } from 'react';
 import app from "../firebase/firebase.confic";
 export const AuthContext = createContext();
@@ -9,6 +9,18 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     console.log(loading, user);
+
+
+    const forgetPassword = (email) => {
+        setLoading(true);
+        return sendPasswordResetEmail(auth, email);
+    }
+
+    const googleProvider = new GoogleAuthProvider();
+    const signInWithGoogle = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+    }
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -44,11 +56,13 @@ const AuthProvider = ({ children }) => {
         user,
         setUser,
         createUser,
+        signInWithGoogle,
         logOut,
         signIn,
         loading,
         setLoading,
         updateUser,
+        forgetPassword,
     };
     return <AuthContext value={authData}>{children}</AuthContext>;
 };

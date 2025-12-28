@@ -1,10 +1,23 @@
-import React, { use, useState } from 'react';
+import React, { use } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { FcGoogle } from 'react-icons/fc';
 
 const Signup = () => {
-    const { createUser, setUser, updateUser } = use(AuthContext);
+    const { createUser, setUser, updateUser, signInWithGoogle } = use(AuthContext);
     const navigate = useNavigate;
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                const user = result.user
+                console.log(user)
+                navigate("/")
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 
 
     const handleSubmit = (e) => {
@@ -100,6 +113,8 @@ const Signup = () => {
                             Sign Up
                         </button>
                     </form>
+                    <div onClick={handleGoogleSignIn} className=" w-auto mx-6 btn btn-outline hover:bg-blue-400 mb-2"><FcGoogle size={24} /> Sign Up with Google
+                    </div>
                     <p className="text-center text-sm pb-6">
                         Already have an account?{" "}
                         <Link to="/auth/login" className="text-blue-600 cursor-pointer hover:underline">
