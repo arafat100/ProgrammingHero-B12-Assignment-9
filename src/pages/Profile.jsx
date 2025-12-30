@@ -12,6 +12,7 @@ const Profile = () => {
         if (!loading && !user) {
             navigate("/auth/login");
         }
+
     });
     return (
         <div>
