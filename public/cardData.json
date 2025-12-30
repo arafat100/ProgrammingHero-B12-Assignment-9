@@ -8,7 +8,7 @@
         "rating": 4.8,
         "slotsAvailable": 3,
         "description": "Acoustic guitar classes for complete beginners.",
-        "image": "https://i.postimg.cc/CK9vF8N7/lifestyle-750391-684.jpg",
+        "image": "https://i.postimg.cc/2848N41h/lifestyle-750391-684.jpg",
         "category": "Music"
     },
     {
@@ -20,7 +20,7 @@
         "rating": 4.6,
         "slotsAvailable": 5,
         "description": "Conversational English sessions for non-native speakers.",
-        "image": "https://i.postimg.cc/wTWQqJx2/unnamed.jpg",
+        "image": "https://i.postimg.cc/NjdtQbBK/unnamed.jpg",
         "category": "Language"
     },
     {
@@ -32,7 +32,7 @@
         "rating": 4.9,
         "slotsAvailable": 4,
         "description": "Learn essential cooking techniques and quick recipes.",
-        "image": "https://i.postimg.cc/FsqkCxsp/cooking.jpg",
+        "image": "https://i.postimg.cc/9FVHTsf0/cooking.jpg",
         "category": "Cooking"
     },
     {
@@ -44,7 +44,7 @@
         "rating": 4.7,
         "slotsAvailable": 2,
         "description": "HTML, CSS, and JavaScript fundamentals for beginners.",
-        "image": "https://i.postimg.cc/bNGsn2H7/Front-End-Developer-HTML-CSS-Bootstrap-Java-Script-React.jpg",
+        "image": "https://i.postimg.cc/zfHc4kfW/Front-End-Developer-HTML-CSS-Bootstrap-Java-Script-React.jpg",
         "category": "Technology"
     },
     {
@@ -56,7 +56,7 @@
         "rating": 4.9,
         "slotsAvailable": 3,
         "description": "Learn sketching, shading, and designing digital artwork.",
-        "image": "https://i.postimg.cc/y84YSpN8/hand-drawn-digital-drawing-tablet-concept-with-woman-hands-60389-125.avif",
+        "image": "https://i.postimg.cc/zfhxxXtD/hand-drawn-digital-drawing-tablet-concept-with-woman-hands-60389-125.avif",
         "category": "Art"
     },
     {
@@ -68,7 +68,7 @@
         "rating": 4.5,
         "slotsAvailable": 6,
         "description": "Relaxing yoga sessions designed to reduce stress and improve flexibility.",
-        "image": "https://i.postimg.cc/kX8RZb6g/yoga-flat-icon-free-png-download-1756641814-156562756.webp",
+        "image": "https://i.postimg.cc/t4K5nGXK/yoga-flat-icon-free-png-download-1756641814-156562756.webp",
         "category": "Health"
     }
 ]
