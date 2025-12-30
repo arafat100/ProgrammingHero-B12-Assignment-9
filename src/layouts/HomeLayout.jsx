@@ -7,9 +7,11 @@ const HomeLayout = () => {
     return (
         <div className='w-11/12 py-4 mx-auto'>
             <header>
+
                 <Navbar></Navbar>
             </header>
             <main>
+
                 <Outlet></Outlet>
             </main>
             <footer>

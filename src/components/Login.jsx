@@ -8,7 +8,7 @@ const Login = () => {
     const [error, setError] = useState("");
     const { signIn, signInWithGoogle, forgetPassword } = use(AuthContext);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     const navigate = useNavigate();
     const emailRef = useRef();
     const [showPassword, setShowPassword] = useState(false);
@@ -31,9 +31,9 @@ const Login = () => {
     };
 
     const handleForgetPassword = () => {
-        console.log("forget password", emailRef.current);
+        // console.log("forget password", emailRef.current);
         const email = emailRef.current.value;
-        console.log(email);
+        // console.log(email);
         forgetPassword(email)
             .then(() => {
                 alert("please check your email");
@@ -50,10 +50,10 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         const form = e.target;
-        console.log(form);
+        // console.log(form);
         const email = form.email.value;
         const password = form.password.value;
-        console.log({ email, password })
+        // console.log({ email, password })
         signIn(email, password)
             .then((result) => {
                 const user = result.user;

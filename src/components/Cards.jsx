@@ -5,7 +5,7 @@ const cardPromise = fetch("/cardData.json")
 
 const Cards = () => {
 
-    console.log(cardPromise);
+    // console.log(cardPromise);
     const cards = use(cardPromise);
     return (
         <div>
