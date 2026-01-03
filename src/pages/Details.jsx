@@ -27,14 +27,14 @@ const Details = () => {
         <div className="max-w-5xl mx-auto p-6">
 
 
-            <h1 className="text-2xl font-bold mb-6">Available Skills</h1>
+            <h1 className="text-2xl font-bold text-gray-600 mb-6">Available Skills</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {details.map(detail => (
                     <div key={detail.skillId} className="bg-white shadow rounded-xl p-4">
                         <img src={detail.image} className="w-full h-40 object-cover rounded" alt="" />
 
-                        <h2 className="text-lg font-semibold mt-3">{detail.skillName}</h2>
+                        <h2 className="text-lg font-semibold text-gray-600 mt-3">{detail.skillName}</h2>
 
 
                         <div className="text-sm text-gray-600 mt-2 space-y-1">
@@ -52,21 +52,21 @@ const Details = () => {
 
 
             <div className="mt-12 bg-gray-100 p-6 rounded-xl">
-                <h2 className="text-xl font-bold mb-4">Book Session</h2>
+                <h2 className="text-xl font-bold text-gray-600 mb-4">Book Session</h2>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <input
                         type="text"
                         name="name"
                         placeholder="Your Name"
-                        className="p-3 rounded border w-full"
+                        className="p-3 text-gray-400 rounded border w-full"
                         required
                     />
                     <input
                         type="email"
                         name="email"
                         placeholder="Your Email"
-                        className="p-3 rounded border w-full"
+                        className="p-3 text-gray-400 rounded border w-full"
                         required
                     />
 

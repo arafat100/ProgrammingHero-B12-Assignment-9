@@ -14,7 +14,7 @@ const Cards = () => {
                 {cards.map((card) => (
                     <div key={card.skillId} className="bg-white shadow p-4 rounded-lg">
                         <img src={card.image} className="w-full h-40 object-cover rounded" />
-                        <h2 className="text-xl font-semibold mt-3">{card.skillName}</h2>
+                        <h2 className="text-xl font-semibold text-gray-600 mt-3">{card.skillName}</h2>
                         <p className="text-sm text-gray-600 py-2">By: {card.rating}</p>
                         <p className="text-sm text-gray-500 py-2">${card.price}</p>
                         <Link

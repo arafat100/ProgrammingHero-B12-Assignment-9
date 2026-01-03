@@ -26,7 +26,7 @@ const Rateds = () => {
                                     className="w-full h-40 object-cover rounded"
                                 />
 
-                                <h3 className="text-lg font-semibold mt-3">{provider.skillName}</h3>
+                                <h3 className="text-lg font-semibold text-gray-600 mt-3">{provider.skillName}</h3>
                                 <p className="text-sm text-gray-600">{provider.providerName}</p>
                                 <p className="text-sm text-gray-600">{provider.category}</p>
 
