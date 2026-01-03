@@ -45,7 +45,7 @@ const Navbar = () => {
                     <NavLink to="/">Home</NavLink>
                 </ul>
                 <ul className="menu menu-horizontal px-1">
-                    <NavLink to="/quickAction">Quick Action</NavLink>
+                    <NavLink to="/blog">Blog</NavLink>
                 </ul>
                 <div>
                     {user &&
