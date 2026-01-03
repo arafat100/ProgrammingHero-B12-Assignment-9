@@ -54,7 +54,7 @@ const Details = () => {
             <div className="mt-12 bg-gray-100 p-6 rounded-xl">
                 <h2 className="text-xl font-bold text-gray-600 mb-4">Book Session</h2>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-gray-600">
                     <input
                         type="text"
                         name="name"
